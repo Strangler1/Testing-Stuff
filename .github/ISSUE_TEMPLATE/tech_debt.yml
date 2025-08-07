@@ -1,0 +1,46 @@
+name: 🛠 Technical Debt / Refactor
+description: Request for code cleanup or optimization
+title: "[REFACTOR] <short title>"
+labels: [tech-debt, cleanup]
+body:
+  - type: input
+    id: area
+    attributes:
+      label: Affected Module / File
+      placeholder: "src/utils/dateFormatter.js"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - 🔴 Critical - High impact
+        - 🟠 High - Should be done soon
+        - 🟡 Medium - Not urgent
+        - 🟢 Low - Whenever possible
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be refactored?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Change
+      description: Why should this be improved?
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+      description: Any risks or breaking changes?

@@ -1,0 +1,73 @@
+name: 🐞 Bug Report
+description: Report a reproducible bug in the project
+title: "[BUG] <short title>"
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐞 Bug Report
+        Please fill out all required sections for faster triage.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: Short description of the bug
+      placeholder: "Login button doesn't respond on click"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this issue?
+      options:
+        - 🔴 Critical - Blocks core functionality
+        - 🟠 High - Major functionality broken
+        - 🟡 Medium - Minor bug or workaround available
+        - 🟢 Low - Cosmetic or trivial issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: List clear, step-by-step instructions.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Observe the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: System and software details.
+      placeholder: "OS: Windows 11, Node.js v18, Chrome 117"
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: Add screenshots, logs, or error messages.
